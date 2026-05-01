@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"ai-sql-customer-service/internal/llm"
 	"ai-sql-customer-service/model"
 	"net/http"
 
@@ -28,9 +29,18 @@ func AIask(c *gin.Context) {
 		})
 		return
 	}
+	// 调用 AI 生成 SQL
+	sqlText, err := llm.GenerateSQL(req.Question)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
 
+	// 返回 AI 生成的 SQL
 	c.JSON(http.StatusOK, model.AskResponse{
 		Question: req.Question,
-		Message:  "已收到你的问题，下一步会生成 SQL",
+		SQL:      sqlText,
 	})
 }

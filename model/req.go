@@ -8,5 +8,5 @@ type AskRequest struct {
 // AskResponse 定义接口返回结果
 type AskResponse struct {
 	Question string `json:"question"`
-	Message  string `json:"message"`
+	SQL      string `json:"sql"`
 }
