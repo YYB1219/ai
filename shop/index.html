@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velpoow AI Shop — Digital tools for AI creators</title>
+<meta name="description" content="AI-drama prompt systems, ComfyUI/Ollama fix-it packs, LoL VOD reviews, Muse invite tokens. Instant delivery by Telegram bot.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#070d1f;--bg2:#0b1531;--card:#101c3d;--line:#22345f;--txt:#eaf0ff;--mut:#93a5cc;--acc:#4da3ff;--acc2:#7cc0ff}
+body{background:radial-gradient(900px 500px at 50% -100px,#16295c 0%,var(--bg) 55%);color:var(--txt);font-family:-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;min-height:100vh}
+.wrap{max-width:880px;margin:0 auto;padding:28px 16px 48px}
+header{text-align:center;padding:18px 0 8px}
+.logo{width:64px;height:64px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(145deg,#1b3268,#0d1836);border:2px solid var(--acc);display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:var(--acc2)}
+h1{font-size:28px;letter-spacing:.5px}
+.tag{color:var(--mut);margin-top:8px;font-size:14px;line-height:1.6}
+.langbar{margin:16px 0 4px}
+.langbar button{background:var(--card);color:var(--mut);border:1px solid var(--line);padding:6px 16px;font-size:13px;cursor:pointer}
+.langbar button:first-child{border-radius:16px 0 0 16px}
+.langbar button:last-child{border-radius:0 16px 16px 0}
+.langbar button.on{background:var(--acc);color:#04122e;font-weight:700;border-color:var(--acc)}
+.pays{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 22px}
+.pays span{background:#0d1a38;border:1px solid var(--line);color:var(--acc2);border-radius:999px;padding:5px 13px;font-size:12.5px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}.featured{grid-column:span 2}}
+.card{background:linear-gradient(160deg,var(--card),#0c1730);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card h2{font-size:17px;line-height:1.4}
+.card p{color:var(--mut);font-size:13.5px;line-height:1.65;flex:1}
+.price{font-size:19px;font-weight:800;color:#fff}
+.price small{color:var(--mut);font-weight:400;font-size:12.5px}
+.btn{display:block;text-align:center;background:var(--acc);color:#04122e;font-weight:700;text-decoration:none;border-radius:11px;padding:12px;font-size:15px}
+.btn:active{opacity:.85}
+.featured{border:2px solid var(--acc);box-shadow:0 0 26px rgba(77,163,255,.35);background:linear-gradient(160deg,#152a5e,#0c1730)}
+.badge{align-self:flex-start;background:var(--acc);color:#04122e;font-size:12px;font-weight:800;border-radius:999px;padding:4px 12px}
+.steps{margin:28px 0 6px;background:#0b1734;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.steps h3{font-size:15px;margin-bottom:10px}
+.steps ol{margin-left:18px;color:var(--mut);font-size:13.5px;line-height:1.9}
+footer{text-align:center;color:var(--mut);font-size:13px;margin-top:26px;line-height:2}
+footer a{color:var(--acc2);text-decoration:none}
+.zh{display:none}
+body.cn .en{display:none}
+body.cn .zh{display:block}
+body.cn span.zh{display:inline}
+span.zh{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo">V</div>
+<h1>Velpoow AI Shop</h1>
+<p class="tag en">Digital tools for AI creators — instant delivery by Telegram bot.</p>
+<p class="tag zh">AI 创作者数字工具 — Telegram 机器人自动发货。</p>
+<div class="langbar"><button id="ben" class="on" onclick="setLang('en')">🇬🇧 English</button><button id="bzh" onclick="setLang('zh')">🇨🇳 中文</button></div>
+<div class="pays"><span>⭐ Telegram Stars</span><span>💎 TON</span><span>💳 Alipay <span class="zh">支付宝</span></span><span>💚 WeChat Pay <span class="zh">微信</span></span></div>
+</header>
+
+<div class="grid">
+<div class="card featured">
+<span class="badge en">⭐ Featured</span><span class="badge zh">⭐ 主推</span>
+<h2 class="en">Muse Invite Tokens</h2><h2 class="zh">Muse 邀请词元</h2>
+<p class="en">Invite-token packs: 1B ¥1.5 · 10B ¥15 · 30B ¥28. Manual invite fulfillment by our upstream team — pay in the bot, send your invite code, done. No account password needed.</p>
+<p class="zh">邀请词元三档：10亿 ¥1.5 · 100亿 ¥15 · 300亿 ¥28。上游团队人工代邀请，机器人里付款后发邀请码即可，不用给账号密码。</p>
+<div class="price">¥1.5 / ¥15 / ¥28</div>
+<a class="btn en" href="https://t.me/velpoowshopbot?start=muse10">Order on Telegram →</a>
+<a class="btn zh" href="https://t.me/velpoowshopbot?start=muse10">去 Telegram 下单 →</a>
+</div>
+
+<div class="card">
+<h2 class="en">AI Micro-Drama Prompt Bible</h2><h2 class="zh">AI漫剧分镜提示词包</h2>
+<p class="en">The industrial AI-drama pipeline: Asset Lock → Storyboard → Image Prompts → Motion Prompts. For Jimeng / Kling / Vidu / Midjourney.</p>
+<p class="zh">专业短剧团队工业流程：资产锁定→分镜拆解→静态图提示词→动态镜头提示词。适配即梦/可灵/Vidu/Midjourney。</p>
+<div class="price">$9.99 <small>/ ¥29.9</small></div>
+<a class="btn en" href="https://t.me/velpoowshopbot?start=manju">Order on Telegram →</a>
+<a class="btn zh" href="https://t.me/velpoowshopbot?start=manju">去 Telegram 下单 →</a>
+</div>
+
+<div class="card">
+<h2 class="en">Local AI Fix-It Pack</h2><h2 class="zh">本地AI报错速查包</h2>
+<p class="en">ComfyUI / Ollama / CUDA: the 10 errors everyone hits — real cause + one-step fix + install checklist.</p>
+<p class="zh">ComfyUI/Ollama/CUDA 十大常见报错：真实原因+一步修复+安装前检查清单。</p>
+<div class="price">$6.99 <small>/ ¥19.9</small></div>
+<a class="btn en" href="https://t.me/velpoowshopbot?start=fixit">Order on Telegram →</a>
+<a class="btn zh" href="https://t.me/velpoowshopbot?start=fixit">去 Telegram 下单 →</a>
+</div>
+
+<div class="card">
+<h2 class="en">LoL VOD Review Report</h2><h2 class="zh">LoL 对局复盘报告</h2>
+<p class="en">Send a replay or screenshots, get a written breakdown: draft, laning, teamfights, your 3 highest-impact fixes. Within 24h.</p>
+<p class="zh">发录像或截图，24 小时内出图文报告：BP、对线、团战、最该改的 3 个点。</p>
+<div class="price">$7.99 <small>/ ¥29.9</small></div>
+<a class="btn en" href="https://t.me/velpoowshopbot?start=lol">Order on Telegram →</a>
+<a class="btn zh" href="https://t.me/velpoowshopbot?start=lol">去 Telegram 下单 →</a>
+</div>
+
+<div class="card">
+<h2 class="en">Free API Setup Guide (packet.ai)</h2><h2 class="zh">免费API配置指南（packet.ai）</h2>
+<p class="en">Claim free API tokens (DeepSeek V4.1 Flash + more, free until Dec 16, 2026, no credit card). Step-by-step setup.</p>
+<p class="zh">DeepSeek V4.1 Flash 等模型 API 免费领（至 2026-12-16，无需绑卡），图文步骤+接入配置。</p>
+<div class="price">$4.99 <small>/ ¥9.9</small></div>
+<a class="btn en" href="https://t.me/velpoowshopbot?start=packet">Order on Telegram →</a>
+<a class="btn zh" href="https://t.me/velpoowshopbot?start=packet">去 Telegram 下单 →</a>
+</div>
+</div>
+
+<div class="steps">
+<h3 class="en">How to order</h3><h3 class="zh">下单三步</h3>
+<ol class="en"><li>Tap a product's order button — it opens the bot at that exact product.</li><li>Pay with Stars, Alipay or WeChat Pay.</li><li>Digital packs arrive automatically in the chat. Invite tokens are fulfilled manually by our upstream team.</li></ol>
+<ol class="zh"><li>点商品的下单按钮，直达机器人对应商品页。</li><li>用 Stars、支付宝或微信付款。</li><li>数字包付款后自动发货；邀请词元由上游团队人工履约。</li></ol>
+</div>
+
+<footer>
+📣 <span class="en">Channel</span><span class="zh">频道</span>: <a href="https://t.me/velpoowaishop">@velpoowaishop</a> · 🤖 <span class="en">Bot</span><span class="zh">机器人</span>: <a href="https://t.me/velpoowshopbot">@velpoowshopbot</a>
+</footer>
+</div>
+<script>
+function setLang(l){document.body.classList.toggle('cn',l==='zh');document.getElementById('ben').classList.toggle('on',l==='en');document.getElementById('bzh').classList.toggle('on',l==='zh');}
+if((navigator.language||'').toLowerCase().indexOf('zh')===0)setLang('zh');
+</script>
+</body>
+</html>
